@@ -1,0 +1,140 @@
+@import url('preconnect" href="https://fonts.gstatic.com');
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+@import url('https://fonts.gstatic.com');
+@import url('https://fonts.googleapis.com/css2?family=Pavanam&display=swap');
+@import 'fontello/css/fontello.css';
+
+$color-1: #ffffff;
+$color-2: #FF1640;
+$color-3: #b4b4b4;
+$font_1: 'Paytone One', sans-serif;
+$font_2: Segoe UI, sans-serif;
+$font_3: 'Pavanam', sans-serif;
+
+@mixin grad{
+    background: -moz-linear-gradient(top,  rgba(50,42,39,0.53) 0%, rgba(45,40,40,0.76) 49%, rgba(45,40,40,1) 100%); 
+    background: -webkit-linear-gradient(top,  rgba(50,42,39,0.53) 0%,rgba(45,40,40,0.76) 49%,rgba(45,40,40,1) 100%);
+    background: linear-gradient(to bottom,  rgba(50,42,39,0.53) 0%,rgba(45,40,40,0.76) 49%,rgba(45,40,40,1) 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87322a27', endColorstr='#2d2828',GradientType=0 );
+}
+
+@mixin text($font, $color, $txt-trf, $fst, $fw, $fs, $lh) {
+    font-family: $font;
+    color: $color;
+    text-decoration: none;
+    text-transform: $txt-trf;
+    font-style: $fst;
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+}
+
+body{
+    margin: 0 auto;
+    font-family: $font_2;
+    color: $color-1;
+}
+
+.header{
+    margin: 0 auto;
+    background-image: url(../images/background_1.png);
+    background-position: 0 0;
+    background-size: cover;
+    height: 100vh;
+
+    .header-nav{
+        padding: 35px 0 0 55px;
+        box-sizing: border-box; 
+
+        .header-nav_container{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+                        
+            .header-nav_container_logo{
+                background-image: url(../images/red-rect.png);
+                background-size: 140px 59px;
+                background-position: center;
+                background-repeat: no-repeat;
+                max-width: 140px;
+                padding: 20px 40px 20px 15px;
+                margin-right: 75px;
+
+                a{
+                    @include text($font_1, $color-1, uppercase, normal, normal, 25px, 35px);
+                }
+            }
+            .header-nav_container_links{
+                
+                a{
+                    margin-right: 30px;
+                    @include text($font_1, $color-1, uppercase, normal, normal, 18px, 25px);
+                }
+            }
+        }
+    }
+
+    .header-block{
+        margin: 100px 200px 0 200px; 
+        padding: 100px 65px 80px 65px;
+        width: 1000px;
+        height: 590px;
+        text-align: left;
+        box-sizing: border-box;
+        // background-color: linear-gradient(line-height, #322a27,#2d2828);
+        @include grad;
+        
+        h1{
+            @include text($font_1, $color-1, uppercase, normal, normal, 64px, 89px);
+        }
+
+        h2{
+            @include text($font_1, $color-1, uppercase, normal, normal, 20px, 28px);
+        }
+        .header-block_content{
+            @include text($font_2, $color-1, none, normal, normal, 18px, 149.8%);
+            width: 432px;
+            padding-bottom: 25px;
+        }
+        .header-form{
+            input{
+                background-color: transparent;
+                border-width: 2px;
+                border-radius: 100px;
+                border-style: solid;
+                @include text($font_3, $color-3, none, normal, normal, 14px, 18px);
+                transition: 800ms ease;
+            }
+            .hf-email{
+                padding: 10px 130px 10px 30px;
+                margin-right: 15px;
+                border-color: $color-3;
+                &:focus{
+                    border-color:$color-2;
+                }
+            }
+            .hf-request{
+                padding: 10px 30px 10px 30px;
+                border-color:$color-2;
+                &:hover{
+                    color: $color-1;
+                    cursor: pointer; 
+                    @include text($font_3, $color-3, none, normal, bold, 16px, 18px);
+                }
+            }
+        }
+    }
+    span{
+        display: block;
+        background-color: $color-3;
+        height: 2px;
+    }
+    .header-sns{
+        padding: 30px 65px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+}
