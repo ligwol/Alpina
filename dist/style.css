@@ -63,7 +63,7 @@ body {
   position: relative;
 }
 .main .main-block {
-  margin: 0px 200px 0 200px;
+  margin: 0px 120px;
   max-height: 400vh;
   position: absolute;
   top: -80vh;
@@ -227,19 +227,217 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 25px;
 }
 .main .main-block .main-thread-info .thread-feedback .block1-head .block1-head12 {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  align-items: center;
+  font-family: Segoe UI, sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 149.8%;
 }
 .main .main-block .main-thread-info .thread-feedback .block1-head .block1-head12 .block-head1 {
+  margin-right: 7px;
   padding: 5px;
   background-color: #FF1640;
-  border-radius: 50%;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.main .main-block .main-thread-info .thread-feedback .block1-head .block-head3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #b4b4b4;
+  font-family: Segoe UI, sans-serif;
+  color: #2D2828;
+  text-decoration: none;
+  text-transform: none;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 149.8%;
+  padding: 5px 13px 5px 5px;
+  border-radius: 60px;
+}
+.main .main-block .main-thread-info .thread-feedback .block1-head .block-head3 img {
+  padding-right: 8px;
+}
+.main .main-block .main-thread-info .block2-head {
+  margin: 25px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main .main-block .main-thread-info .block2-head .block-head1 {
+  font-family: Segoe UI, sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: none;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 149.8%;
+  display: flex;
+  align-items: center;
+}
+.main .main-block .main-thread-info .block2-head .switcher {
+  font-family: Segoe UI, sans-serif;
+  color: #2D2828;
+  text-decoration: none;
+  text-transform: none;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 149.8%;
+  display: flex;
+  align-items: center;
+  background-color: #b4b4b4;
+  border-radius: 2em;
+  padding: 0 0 0 10px;
+}
+.main .main-block .main-thread-info .block2-head .switcher input {
+  display: none;
+}
+.main .main-block .main-thread-info .block2-head .switcher > input + div {
+  width: 45px;
+  height: 30px;
+  border-radius: 25px;
+  background-color: #ffffff;
+  transition: 250ms ease;
+  margin: 5px;
+  position: relative;
+}
+.main .main-block .main-thread-info .block2-head .switcher > input + div::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 26px;
+  height: 26px;
+  border-radius: 13px;
+  background-color: #FF1640;
+  box-shadow: #2D2828 0 0 1px;
+  transition: 250ms ease;
+  transform: translateX(0);
+}
+.main .main-block .main-thread-info .block2-head .switcher > input:checked + div {
+  background-color: #FF1640;
+}
+.main .main-block .main-thread-info .block2-head .switcher > input:checked + div::before {
+  background-color: #ffffff;
+  transform: translateX(15px);
+}
+.main .main-block .main-thread-info .block-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-image: url(../images/background_2.png);
+  background-size: cover;
+  font-family: Segoe UI, sans-serif;
+  color: #2D2828;
+  text-decoration: none;
+  text-transform: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 149.8%;
+}
+.main .main-block .main-thread-info .block-content .block-content-pp {
+  display: flex;
+}
+.main .main-block .main-thread-info .block-content .block-content-pp .pp__img {
+  position: relative;
+  margin: 15px;
+}
+.main .main-block .main-thread-info .block-content .block-content-pp .pp__img .icon {
+  position: absolute;
+  right: 0;
+  top: 35px;
+}
+.main .main-block .main-thread-info .block-content .block-content-pp .pp__txt {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin: 15px 15px 15px 0;
+}
+.main .main-block .main-thread-info .block-content .block-content-pp .pp__txt h4 {
+  font-weight: bold;
+  margin: 0;
+}
+.main .main-block .main-thread-info .block-content .block-content-pp .pp__txt p {
+  margin: 0;
+  font-family: Segoe UI, sans-serif;
+  color: #2D2828;
+  text-decoration: none;
+  text-transform: lowercase;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 100%;
+  white-space: nowrap;
+}
+.main .main-block .main-thread-info .block-content .block-content-text {
+  margin: 15px;
+}
+.main .main-block .main-thread-info .block-content .block-content-text h3 {
+  margin: 0;
+  font-family: Segoe UI, sans-serif;
+  color: #2D2828;
+  text-decoration: none;
+  text-transform: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 32.96px;
+}
+.main .main-block .main-thread-info .block-content .block-content-text .block-content-text-t {
+  margin: 10px 0;
+  font-family: Segoe UI, sans-serif;
+  color: #2D2828;
+  text-decoration: none;
+  text-transform: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 149.8%;
 }
 .main .main-block .main-thread-info .thread-instruction {
   display: flex;
   flex-direction: column;
   flex-basis: 40%;
+  margin: 0 0 0 5rem;
+}
+.main .main-block .main-thread-info .thread-instruction h3 {
+  margin-top: 3.5rem;
+  font-family: Segoe UI, sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: none;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 32.96px;
+}
+.main .main-block .main-thread-info .thread-instruction .instruction-text {
+  margin: 10px 0;
+  font-family: Segoe UI, sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20.97px;
 }

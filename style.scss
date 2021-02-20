@@ -7,6 +7,8 @@
 $color-1: #ffffff;
 $color-2: #FF1640;
 $color-3: #b4b4b4;
+$color-4: #2D2828;
+
 $font_1: 'Paytone One', sans-serif;
 $font_2: Segoe UI, sans-serif;
 $font_3: 'Pavanam', sans-serif;
@@ -82,7 +84,7 @@ body{
     position: relative;
 
     .main-block{
-        margin: 0px 200px 0 200px;
+        margin: 0px 120px; //changed fr0m 200;
         max-height: 400vh; //calc(100vh - 210px); 
         // background-color: linear-gradient(line-height, #322a27,#2d2828);
         position: absolute;
@@ -209,15 +211,144 @@ body{
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
+                    margin-bottom: 25px;
                     .block1-head12{
                         display: flex;
                         flex-direction: row;
-                        justify-content: flex-start;
+                        align-items: center;
+                        @include text($font_2, $color-1, capitalize, normal, bold, 18px, 149.8%);
                         .block-head1{
+                            margin-right: 7px;
                             padding: 5px;
                             background-color: $color-2;
-                            border-radius: 50%;
+                            border-radius: 100%;
+                            width: 20px;
+                            height: 20px;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: center;
                         }
+                    }
+
+                    .block-head3{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        background-color: $color-3;
+                        @include text($font_2, $color-4, none, normal, 600, 16px, 149.8%);
+                        padding: 5px 13px 5px 5px;
+                        border-radius: 60px;
+                        img{
+                            padding-right: 8px;
+                        }
+                    }
+                }
+            }
+
+            .block2-head{
+                margin: 25px 0;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                .block-head1{
+                    @include text($font_2, $color-1, none, normal, 600, 18px, 149.8%);
+                    display: flex;
+                    align-items: center;
+                }
+
+                .switcher {
+                    @include text($font_2, $color-4, none, normal, 600, 16px, 149.8%);
+                    display: flex;
+                    align-items: center;
+                    background-color: $color-3;
+                    border-radius: 2em;
+                    padding: 0 0 0 10px;
+                    & input {
+                        display: none;
+                    }
+                    &>input+div {
+                        width: 45px;
+                        height: 30px;
+                        border-radius: 25px;
+                        background-color: $color-1;
+                        // box-shadow: inset $color-2 0 0 1px;
+                        transition: 250ms ease;
+                        margin: 5px;
+                        position: relative;
+                    }
+                    &>input+div::before {
+                        display: block;
+                        content: '';
+                        position: absolute;
+                        top: 2px;
+                        left: 2px;
+                        width: 26px;
+                        height: 26px;
+                        border-radius: 13px;
+                        background-color:$color-2;
+                        box-shadow: $color-4 0 0 1px;
+                        transition: 250ms ease;
+                        transform: translateX(0);
+                    }
+                    &>input:checked+div {
+                        background-color:$color-2;
+                    }
+                    &>input:checked+div::before {
+                        background-color: $color-1;
+                        transform: translateX(15px);
+                    }
+                }
+            }
+
+
+            .block-content{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                background-image: url(../images/background_2.png);
+                background-size: cover;
+                @include text($font_2, $color-4, none, normal, normal, 18px, 149.8%);
+                
+                .block-content-pp{
+                    display: flex;
+                    
+                    .pp__img{
+                        position: relative;
+                        margin: 15px;
+                        .icon{
+                            position: absolute;
+                            right: 0;
+                            top: 35px;
+                        }
+                    }
+                    .pp__txt{
+                        display: flex;
+                        flex-direction: column;
+                        box-sizing: border-box;
+                        margin: 15px 15px 15px 0;
+                        h4{
+                            font-weight: bold;
+                            margin: 0;
+                        }
+                        p{
+                            margin: 0;
+                            @include text($font_2, $color-4, lowercase, normal, normal, 16px, 100%);
+                            white-space: nowrap;
+                        }
+                    }
+                    
+                }
+
+                .block-content-text{
+                    margin: 15px;
+                    h3{
+                        margin: 0;
+                        @include text($font_2, $color-4, none, normal, 700, 22px, 32.96px);
+                    }
+                    .block-content-text-t{
+                        margin: 10px 0;
+                        @include text($font_2, $color-4, none, normal, normal, 14px, 149.8%);
                     }
                 }
             }
@@ -226,7 +357,18 @@ body{
                 display: flex;
                 flex-direction: column;
                 flex-basis: 40%;
+                margin: 0 0 0 5rem;
+                h3{
+                        margin-top: 3.5rem;
+                        @include text($font_2, $color-1, none, normal, 600, 22px, 32.96px);
+                    }
+                    .instruction-text{
+                        margin: 10px 0;
+                        @include text($font_2, $color-1, none, normal, 400, 14px, 20.97px);
+                    }
             }
+
+
             
         }
 
