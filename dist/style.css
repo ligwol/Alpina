@@ -8,13 +8,13 @@ body {
   font-family: Segoe UI, sans-serif;
   color: #ffffff;
   background-image: url(../images/background_2.png);
-  background-repeat: repeat-y;
+  background-repeat: repeat-x repeat-y;
 }
 
 .header {
   margin: 0 auto;
   background: url(../images/background_1.png) 0 0;
-  background-position: 0 0;
+  background-position: center center;
   background-size: cover;
   height: 100vh;
   box-sizing: border-box;
@@ -62,23 +62,26 @@ body {
 .main {
   position: relative;
 }
-.main .main-block {
+.main .main-container {
   margin: 0px 120px;
-  max-height: 400vh;
+  max-height: 1681px;
+  max-width: 994px;
   position: absolute;
   top: -80vh;
   box-sizing: border-box;
+}
+.main .main-container .main-block {
   background: -moz-linear-gradient(top, rgba(50, 42, 39, 0.53) 0%, rgba(45, 40, 40, 0.76) 49%, #2d2828 100%);
   background: -webkit-linear-gradient(top, rgba(50, 42, 39, 0.53) 0%, rgba(45, 40, 40, 0.76) 49%, #2d2828 100%);
   background: linear-gradient(to bottom, rgba(50, 42, 39, 0.53) 0%, rgba(45, 40, 40, 0.76) 49%, #2d2828 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#87322a27", endColorstr="#2d2828",GradientType=0 );
 }
-.main .main-block .main-block_content {
+.main .main-container .main-block .main-block_content {
   padding: 80px 60px;
   text-align: left;
   box-sizing: border-box;
 }
-.main .main-block .main-block_content h1 {
+.main .main-container .main-block .main-block_content h1 {
   margin: 0;
   font-family: "Paytone One", sans-serif;
   color: #ffffff;
@@ -89,7 +92,7 @@ body {
   font-size: 64px;
   line-height: 89px;
 }
-.main .main-block .main-block_content h2 {
+.main .main-container .main-block .main-block_content h2 {
   margin: 0;
   font-family: "Paytone One", sans-serif;
   color: #ffffff;
@@ -100,7 +103,7 @@ body {
   font-size: 20px;
   line-height: 28px;
 }
-.main .main-block .main-block_content .main-block_text {
+.main .main-container .main-block .main-block_content .main-block_text {
   padding: 25px 0;
   font-family: Segoe UI, sans-serif;
   color: #ffffff;
@@ -111,7 +114,7 @@ body {
   font-size: 18px;
   line-height: 149.8%;
 }
-.main .main-block .main-block_content .main-form input {
+.main .main-container .main-block .main-block_content .main-form input {
   background-color: transparent;
   border-width: 2px;
   border-radius: 100px;
@@ -126,19 +129,19 @@ body {
   line-height: 18px;
   transition: 800ms ease;
 }
-.main .main-block .main-block_content .main-form .mf-email {
+.main .main-container .main-block .main-block_content .main-form .mf-email {
   margin-right: 20px;
   padding: 10px 130px 10px 30px;
   border-color: #b4b4b4;
 }
-.main .main-block .main-block_content .main-form .mf-email:focus {
+.main .main-container .main-block .main-block_content .main-form .mf-email:focus {
   border-color: #FF1640;
 }
-.main .main-block .main-block_content .main-form .mf-request {
+.main .main-container .main-block .main-block_content .main-form .mf-request {
   padding: 10px 30px;
   border-color: #FF1640;
 }
-.main .main-block .main-block_content .main-form .mf-request:hover {
+.main .main-container .main-block .main-block_content .main-form .mf-request:hover {
   color: #ffffff;
   cursor: pointer;
   font-family: "Pavanam", sans-serif;
@@ -150,19 +153,19 @@ body {
   font-size: 16px;
   line-height: 18px;
 }
-.main .main-block span {
+.main .main-container .main-block span {
   display: block;
   background-color: #b4b4b4;
   height: 2px;
 }
-.main .main-block .main-sns {
+.main .main-container .main-block .main-sns {
   padding: 30px 65px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
 }
-.main .main-block .marketing-photos {
+.main .main-container .main-block .marketing-photos {
   margin: 105px 0 65px 0;
   display: flex;
   flex-direction: row;
@@ -170,11 +173,11 @@ body {
   position: relative;
   justify-content: space-around;
 }
-.main .main-block .marketing-photos .center {
+.main .main-container .main-block .marketing-photos .center {
   position: absolute;
   top: -75px;
 }
-.main .main-block .marketing-text {
+.main .main-container .main-block .marketing-text {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -187,14 +190,14 @@ body {
   font-size: 25px;
   line-height: 35px;
 }
-.main .main-block .marketing-text p {
+.main .main-container .main-block .marketing-text p {
   margin: 0;
   padding: 0;
   font-weight: 100;
   font-family: Segoe UI, sans-serif;
   opacity: 70%;
 }
-.main .main-block .marketing-text .start-thread-button {
+.main .main-container .main-block .marketing-text .start-thread-button {
   margin-left: 5px;
   background: linear-gradient(180deg, #864A23 0%, #6A3A1B 100%);
   border-radius: 20px;
@@ -203,7 +206,7 @@ body {
   display: flex;
   align-items: center;
 }
-.main .main-block .marketing-text .start-thread-button a {
+.main .main-container .main-block .marketing-text .start-thread-button a {
   font-family: Segoe UI, sans-serif;
   color: #ffffff;
   text-decoration: none;
@@ -213,23 +216,23 @@ body {
   font-size: 14px;
   line-height: 149.8%;
 }
-.main .main-block .main-thread-info {
+.main .main-container .main-block .main-thread-info {
   margin: 60px;
   display: flex;
   flex-direction: row;
 }
-.main .main-block .main-thread-info .thread-feedback {
+.main .main-container .main-block .main-thread-info .thread-feedback {
   display: flex;
   flex-direction: column;
   flex-basis: 60%;
 }
-.main .main-block .main-thread-info .thread-feedback .block1-head {
+.main .main-container .main-block .main-thread-info .thread-feedback .block1-head {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 25px;
 }
-.main .main-block .main-thread-info .thread-feedback .block1-head .block1-head12 {
+.main .main-container .main-block .main-thread-info .thread-feedback .block1-head .block1-head12 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -242,7 +245,7 @@ body {
   font-size: 18px;
   line-height: 149.8%;
 }
-.main .main-block .main-thread-info .thread-feedback .block1-head .block1-head12 .block-head1 {
+.main .main-container .main-block .main-thread-info .thread-feedback .block1-head .block1-head12 .block-head1 {
   margin-right: 7px;
   padding: 5px;
   background-color: #FF1640;
@@ -254,7 +257,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-.main .main-block .main-thread-info .thread-feedback .block1-head .block-head3 {
+.main .main-container .main-block .main-thread-info .thread-feedback .block1-head .block-head3 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -270,16 +273,16 @@ body {
   padding: 5px 13px 5px 5px;
   border-radius: 60px;
 }
-.main .main-block .main-thread-info .thread-feedback .block1-head .block-head3 img {
+.main .main-container .main-block .main-thread-info .thread-feedback .block1-head .block-head3 img {
   padding-right: 8px;
 }
-.main .main-block .main-thread-info .block2-head {
+.main .main-container .main-block .main-thread-info .block2-head {
   margin: 25px 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.main .main-block .main-thread-info .block2-head .block-head1 {
+.main .main-container .main-block .main-thread-info .block2-head .block-head1 {
   font-family: Segoe UI, sans-serif;
   color: #ffffff;
   text-decoration: none;
@@ -291,7 +294,7 @@ body {
   display: flex;
   align-items: center;
 }
-.main .main-block .main-thread-info .block2-head .switcher {
+.main .main-container .main-block .main-thread-info .block2-head .switcher {
   font-family: Segoe UI, sans-serif;
   color: #2D2828;
   text-decoration: none;
@@ -306,10 +309,10 @@ body {
   border-radius: 2em;
   padding: 0 0 0 10px;
 }
-.main .main-block .main-thread-info .block2-head .switcher input {
+.main .main-container .main-block .main-thread-info .block2-head .switcher input {
   display: none;
 }
-.main .main-block .main-thread-info .block2-head .switcher > input + div {
+.main .main-container .main-block .main-thread-info .block2-head .switcher > input + div {
   width: 45px;
   height: 30px;
   border-radius: 25px;
@@ -318,7 +321,7 @@ body {
   margin: 5px;
   position: relative;
 }
-.main .main-block .main-thread-info .block2-head .switcher > input + div::before {
+.main .main-container .main-block .main-thread-info .block2-head .switcher > input + div::before {
   display: block;
   content: "";
   position: absolute;
@@ -332,14 +335,14 @@ body {
   transition: 250ms ease;
   transform: translateX(0);
 }
-.main .main-block .main-thread-info .block2-head .switcher > input:checked + div {
+.main .main-container .main-block .main-thread-info .block2-head .switcher > input:checked + div {
   background-color: #FF1640;
 }
-.main .main-block .main-thread-info .block2-head .switcher > input:checked + div::before {
+.main .main-container .main-block .main-thread-info .block2-head .switcher > input:checked + div::before {
   background-color: #ffffff;
   transform: translateX(15px);
 }
-.main .main-block .main-thread-info .block-content {
+.main .main-container .main-block .main-thread-info .block-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -354,29 +357,29 @@ body {
   font-size: 18px;
   line-height: 149.8%;
 }
-.main .main-block .main-thread-info .block-content .block-content-pp {
+.main .main-container .main-block .main-thread-info .block-content .block-content-pp {
   display: flex;
 }
-.main .main-block .main-thread-info .block-content .block-content-pp .pp__img {
+.main .main-container .main-block .main-thread-info .block-content .block-content-pp .pp__img {
   position: relative;
   margin: 15px;
 }
-.main .main-block .main-thread-info .block-content .block-content-pp .pp__img .icon {
+.main .main-container .main-block .main-thread-info .block-content .block-content-pp .pp__img .icon {
   position: absolute;
   right: 0;
   top: 35px;
 }
-.main .main-block .main-thread-info .block-content .block-content-pp .pp__txt {
+.main .main-container .main-block .main-thread-info .block-content .block-content-pp .pp__txt {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   margin: 15px 15px 15px 0;
 }
-.main .main-block .main-thread-info .block-content .block-content-pp .pp__txt h4 {
+.main .main-container .main-block .main-thread-info .block-content .block-content-pp .pp__txt h4 {
   font-weight: bold;
   margin: 0;
 }
-.main .main-block .main-thread-info .block-content .block-content-pp .pp__txt p {
+.main .main-container .main-block .main-thread-info .block-content .block-content-pp .pp__txt p {
   margin: 0;
   font-family: Segoe UI, sans-serif;
   color: #2D2828;
@@ -388,10 +391,10 @@ body {
   line-height: 100%;
   white-space: nowrap;
 }
-.main .main-block .main-thread-info .block-content .block-content-text {
+.main .main-container .main-block .main-thread-info .block-content .block-content-text {
   margin: 15px;
 }
-.main .main-block .main-thread-info .block-content .block-content-text h3 {
+.main .main-container .main-block .main-thread-info .block-content .block-content-text h3 {
   margin: 0;
   font-family: Segoe UI, sans-serif;
   color: #2D2828;
@@ -402,7 +405,7 @@ body {
   font-size: 22px;
   line-height: 32.96px;
 }
-.main .main-block .main-thread-info .block-content .block-content-text .block-content-text-t {
+.main .main-container .main-block .main-thread-info .block-content .block-content-text .block-content-text-t {
   margin: 10px 0;
   font-family: Segoe UI, sans-serif;
   color: #2D2828;
@@ -413,13 +416,13 @@ body {
   font-size: 14px;
   line-height: 149.8%;
 }
-.main .main-block .main-thread-info .thread-instruction {
+.main .main-container .main-block .main-thread-info .thread-instruction {
   display: flex;
   flex-direction: column;
   flex-basis: 40%;
   margin: 0 0 0 5rem;
 }
-.main .main-block .main-thread-info .thread-instruction h3 {
+.main .main-container .main-block .main-thread-info .thread-instruction h3 {
   margin-top: 3.5rem;
   font-family: Segoe UI, sans-serif;
   color: #ffffff;
@@ -430,7 +433,7 @@ body {
   font-size: 22px;
   line-height: 32.96px;
 }
-.main .main-block .main-thread-info .thread-instruction .instruction-text {
+.main .main-container .main-block .main-thread-info .thread-instruction .instruction-text {
   margin: 10px 0;
   font-family: Segoe UI, sans-serif;
   color: #ffffff;
@@ -440,4 +443,47 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 20.97px;
+}
+.main .main-sidebar {
+  display: flex;
+  flex-direction: column;
+}
+.main .main-sidebar .main-sidebar__logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 30px;
+}
+.main .main-sidebar .main-sidebar__partners {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main .main-sidebar .main-sidebar__partners .not-last {
+  padding-right: 30px;
+}
+.main .main-sidebar .main-sidebar__partners .main-sidebar__partners__p .main-sidebar__partners__p_img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.main .main-sidebar .main-sidebar__partners .main-sidebar__partners__p .main-sidebar__partners__p_img > .logo {
+  padding: 0 15px;
+}
+.main .main-sidebar .main-sidebar__partners .main-sidebar__partners__p .main-sidebar__partners__p__text {
+  font-family: Segoe UI, sans-serif;
+  color: #2D2828;
+  text-decoration: none;
+  text-transform: none;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 149.8%;
+  padding: 30px 0;
+}
+
+.footer {
+  background-image: url(../images/background_3.png);
+  background-position: center center;
+  block-size: cover;
 }
