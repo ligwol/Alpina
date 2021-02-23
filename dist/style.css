@@ -10,18 +10,11 @@ body {
   background: url(../images/background_1.png) top/contain repeat-x, url(../images/background_2.png) repeat;
 }
 
-.header {
-  box-sizing: border-box;
-  margin: auto;
-}
-.header .header-nav {
-  margin: 35px 0 20px 55px;
-  box-sizing: border-box;
-}
 .header .header-nav .header-nav_container {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding: 35px 0 20px 55px;
 }
 .header .header-nav .header-nav_container .header-nav_container_logo {
   background-image: url(../images/red-rect.png);
@@ -213,7 +206,7 @@ body {
   padding: 60px;
   display: flex;
   flex-direction: row;
-  margin: 120px auto 45px auto;
+  margin: 0 auto 45px auto;
 }
 .main-block .main-thread-info .thread-feedback {
   display: flex;
@@ -483,7 +476,7 @@ body {
 }
 
 .footer {
-  background: url(../images/background_3.png) bottom/contain repeat-x;
+  background: url(../images/background_3.png) bottom/cover repeat-x;
   position: relative;
   margin-top: 80px;
 }
@@ -495,14 +488,113 @@ body {
   height: 160px;
   background-image: url(../images/background_3.png);
   border-radius: 50%;
+  z-index: -1;
 }
-.footer .footer__circle .footer__circle__red {
+.footer .footer__circle__red {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: -60px;
+  left: calc(50% - 60px);
   width: 120px;
   height: 120px;
   background-color: #FF1640;
   z-index: 5;
   border-radius: 50%;
+}
+.footer .footer__blocks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer .footer__blocks .footer__blocks__info {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  padding: 80px;
+}
+.footer .footer__blocks .footer__blocks__info .footer-blocks__1 {
+  font-family: "Paytone One", sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 45px;
+  line-height: 63px;
+  padding-right: 145px;
+}
+.footer .footer__blocks .footer__blocks__info .footer-blocks__2 {
+  display: flex;
+  flex-direction: row;
+  font-family: Segoe UI, sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 149.8%;
+}
+.footer .footer__blocks .footer__blocks__info .footer-blocks__2 .footer-blocks__2-list > ul {
+  list-style-type: none;
+  padding: 0 80px 0 0;
+}
+.footer .footer__blocks .footer__blocks__info .footer-blocks__2 .footer-blocks__2-list > ul li {
+  font-family: Segoe UI, sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 149.8%;
+}
+.footer .footer__blocks .footer__credits {
+  padding: 70px 70px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.footer .footer__blocks .footer__credits .footer__credits__SNS i {
+  font-family: Segoe UI, sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 149.8%;
+}
+.footer .footer__blocks .footer__credits .footer__credits__bold {
+  font-family: Segoe UI, sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 149.8%;
+  padding: 10px 0;
+}
+.footer .footer__blocks .footer__credits .footer__credits__reg {
+  font-family: Segoe UI, sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 149.8%;
+}
+.footer .footer__thanks {
+  width: 400px;
+  height: 55px;
+  background-color: #ffffff;
+  font-family: "Paytone One", sans-serif;
+  color: #2D2828;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 63px;
 }
