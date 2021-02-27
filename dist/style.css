@@ -7,7 +7,7 @@ body {
   margin: 0 auto;
   font-family: Segoe UI, sans-serif;
   color: #ffffff;
-  background: url(../images/background_1.png) top/contain repeat-x, url(../images/background_2.png) repeat;
+  background: url(../images/background_1.png) top/contain repeat-x, url(../images/background_2.png) no-repeat;
 }
 
 .header .header-nav .header-nav_container {
