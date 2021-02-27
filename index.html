@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alpine</title>
-    <link rel="stylesheet" href="dist/style.css">
-    <link rel="stylesheet" href="/fontello/css/fontello.css">
+    <link rel="stylesheet" href="/dist/style.css">
+    <link rel="stylesheet" href="../fontello/css/fontello.css">
 </head>
 
 <body>
     <header class="header">
-        <nav class="header-nav">
+        <nav class="header-nav" id="main-menu">
             <div class="header-nav_container">
                 <div class="header-nav_container_logo">
                     <a href="#">
@@ -34,6 +34,11 @@
                 </div>
             </div>
         </nav>
+        <button id="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
 
     <section class="main-block">
@@ -241,27 +246,27 @@
         <div class="footer__blocks">
             <div class="footer__blocks__info">
                 <div class="footer-blocks__1">
-                    alpine
+                    <a href="#">alpine</a>
                 </div>
                 <div class="footer-blocks__2">
                     <div class="footer-blocks__2-list">
                         explore
                         <ul>
-                            <li>pricing</li>
-                            <li>mobile</li>
+                            <li><a href="#">pricing</a></li>
+                            <li><a href="#">mobile</a></li>
                         </ul>
                     </div>
                     <div class="footer-blocks__2-list">
                         recourses
                         <ul>
-                            <li>blog</li>
+                            <li><a href="#">blog</a></li>
                         </ul>
                     </div>
                     <div class="footer-blocks__2-list">
                         company
                         <ul>
-                            <li>about us</li>
-                            <li>contact</li>
+                            <li><a href="#">about us</a></li>
+                            <li><a href="#">contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -269,25 +274,27 @@
 
             <div class="footer__credits">
                 <div class="footer__credits__SNS">
-                    <i class="icon-vkontakte"></i>
-                    <i class="icon-twitter"></i>
-                    <i class="icon-facebook"></i>
+                    <a href="#"><i class="icon-vkontakte"></i></a>
+                    <a href="#"><i class="icon-twitter"></i></a>
+                    <a href="#"><i class="icon-facebook"></i></a>
                 </div>
                 <div class="footer__credits__bold">
-                    Terms & Privacy
+                    <a href="#">Terms & Privacy</a>
                 </div>
                 <div class="footer__credits__reg">
-                    © 2019 Threads Group inc.
+                    <a href="#">© 2019 Threads Group inc.</a>
                 </div>
             </div>
         </div>
         
 
         <div class="footer__thanks">
-            thanks for watching
+            <p>thanks for watching
             <img src="images/smile.png" alt="smile">
+        </p>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

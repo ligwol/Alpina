@@ -46,7 +46,79 @@ body {
   font-size: 18px;
   line-height: 25px;
 }
+.header #burger-menu {
+  background-color: #ffffff;
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  box-shadow: none;
+  border: transparent;
+  background-color: transparent;
+  box-sizing: border-box;
+  margin: 20px;
+  padding: 5px;
+  display: none;
+}
+.header #burger-menu span:nth-child(1) {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+.header #burger-menu span:nth-child(2) {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+.header #burger-menu span:nth-child(3) {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
 
+@media screen and (max-width: 1140px) {
+  .header {
+    position: relative;
+  }
+  .header #burger-menu {
+    display: block;
+  }
+  .header .header-nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: -200px;
+    left: -400px;
+    transition: ease-in 300ms;
+    transform: scale(0.01);
+    opacity: 50%;
+  }
+  .header .header-nav.open {
+    justify-content: flex-start;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transform: scale(1);
+    opacity: 100%;
+  }
+  .header .header-nav.open .header-nav_container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 .main-block {
   margin: auto;
   max-height: 1681px;
@@ -479,6 +551,7 @@ body {
   background: url(../images/background_3.png) bottom/cover repeat-x;
   position: relative;
   margin-top: 80px;
+  padding-bottom: 100px;
 }
 .footer .footer__circle {
   position: absolute;
@@ -511,7 +584,7 @@ body {
   flex-direction: row;
   padding: 80px;
 }
-.footer .footer__blocks .footer__blocks__info .footer-blocks__1 {
+.footer .footer__blocks .footer__blocks__info .footer-blocks__1 a {
   font-family: "Paytone One", sans-serif;
   color: #ffffff;
   text-decoration: none;
@@ -538,7 +611,7 @@ body {
   list-style-type: none;
   padding: 0 80px 0 0;
 }
-.footer .footer__blocks .footer__blocks__info .footer-blocks__2 .footer-blocks__2-list > ul li {
+.footer .footer__blocks .footer__blocks__info .footer-blocks__2 .footer-blocks__2-list > ul li a {
   font-family: Segoe UI, sans-serif;
   color: #ffffff;
   text-decoration: none;
@@ -554,7 +627,7 @@ body {
   flex-direction: column;
   align-items: flex-end;
 }
-.footer .footer__blocks .footer__credits .footer__credits__SNS i {
+.footer .footer__blocks .footer__credits .footer__credits__SNS a i {
   font-family: Segoe UI, sans-serif;
   color: #ffffff;
   text-decoration: none;
@@ -564,7 +637,7 @@ body {
   font-size: 30px;
   line-height: 149.8%;
 }
-.footer .footer__blocks .footer__credits .footer__credits__bold {
+.footer .footer__blocks .footer__credits .footer__credits__bold a {
   font-family: Segoe UI, sans-serif;
   color: #ffffff;
   text-decoration: none;
@@ -575,7 +648,7 @@ body {
   line-height: 149.8%;
   padding: 10px 0;
 }
-.footer .footer__blocks .footer__credits .footer__credits__reg {
+.footer .footer__blocks .footer__credits .footer__credits__reg a {
   font-family: Segoe UI, sans-serif;
   color: #ffffff;
   text-decoration: none;
@@ -586,8 +659,9 @@ body {
   line-height: 149.8%;
 }
 .footer .footer__thanks {
-  width: 400px;
-  height: 55px;
+  margin: auto;
+  max-width: 350px;
+  text-align: center;
   background-color: #ffffff;
   font-family: "Paytone One", sans-serif;
   color: #2D2828;
@@ -595,6 +669,6 @@ body {
   text-transform: uppercase;
   font-style: normal;
   font-weight: normal;
-  font-size: 25px;
-  line-height: 63px;
+  font-size: 23px;
+  line-height: 46px;
 }
