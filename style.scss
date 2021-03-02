@@ -16,6 +16,13 @@ sans-serif;
 $font_3: 'Pavanam',
 sans-serif;
 
+$ssm: 320px;
+$sm: 540 px;
+$md: 720px;
+$lg: 960px;
+$xl: 1140px;
+$xxl: 1320px;
+
 @mixin grad {
     background: -moz-linear-gradient(top, rgba(50, 42, 39, 0.53) 0%, rgba(45, 40, 40, 0.76) 49%, rgba(45, 40, 40, 1) 100%);
     background: -webkit-linear-gradient(top, rgba(50, 42, 39, 0.53) 0%, rgba(45, 40, 40, 0.76) 49%, rgba(45, 40, 40, 1) 100%);
@@ -38,7 +45,7 @@ body {
     margin: 0 auto;
     font-family: $font_2;
     color: $color-1;
-    background: url(../images/background_1.png) top/contain repeat-x, url(../images/background_2.png) no-repeat;
+    background: url(../images/background_1.png) top/contain no-repeat, url(../images/background_2.png) repeat-y;
 }
 
 .header {
@@ -120,7 +127,7 @@ body {
 
 }
 
-@media screen and (max-width: 1140px){
+@media screen and (max-width: $xl){
     .header{
         display: flex;
         flex-direction: row;
@@ -185,7 +192,7 @@ body {
     }
 }
 
-@media screen and(max-width: 540px){
+@media screen and(max-width: $ssm){
     .header{
         background-color: $color-4;
         position: sticky;
@@ -265,8 +272,6 @@ body {
 }
 
 .main-block {
-
-    //@include grad;
     margin: auto; //changed fr0m 200;
     max-height: 1681px; //calc(100vh - 210px); 
     max-width: 994px;
@@ -294,7 +299,6 @@ body {
             @include text($font_2, $color-1, none, normal, normal, 18px, 149.8%);
 
         }
-
         .main-form {
             input {
                 background-color: transparent;
@@ -304,21 +308,17 @@ body {
                 @include text($font_3, $color-3, none, normal, normal, 14px, 18px);
                 transition: 800ms ease;
             }
-
             .mf-email {
                 margin-right: 20px;
                 padding: 10px 130px 10px 30px;
                 border-color: $color-3;
-
                 &:focus {
                     border-color: $color-2;
                 }
             }
-
             .mf-request {
                 padding: 10px 30px;
                 border-color: $color-2;
-
                 &:hover {
                     color: $color-1;
                     cursor: pointer;
@@ -327,13 +327,11 @@ body {
             }
         }
     }
-
     span {
         display: block;
         background-color: $color-3;
         height: 1px;
     }
-
     .main-sns {
         padding: 30px 65px;
         display: flex;
@@ -341,7 +339,6 @@ body {
         align-items: center;
         justify-content: space-evenly;
     }
-
     .main-block__images{
         max-width: 850px;
         margin: auto;
@@ -359,8 +356,6 @@ body {
             }
         }
     }
-    
-
     .marketing-text {
         display: flex;
         flex-direction: row;
@@ -389,7 +384,6 @@ body {
             }
         }
     }
-
     .main-thread-info {
         padding: 60px;
         display: flex;
@@ -587,6 +581,69 @@ body {
 
 }
 
+@media screen and(max-width: $lg){
+    .main-block{
+        max-width: 700px;
+        max-height: 100%;
+        .main-block_content{
+            .main-form{
+                display: flex;
+                flex-direction: column;
+                .mf-request, .mf-email{
+                    margin-bottom: 20px;
+                }
+                .mf-request{
+                    max-width: 250px;
+                }
+            }
+        }
+        .main-sns{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            img{
+                padding: 5px 15px;
+            }
+        }
+        .main-block__images{
+            margin: auto;
+            .marketing-photos{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                margin: 20px;
+                img{
+                    max-width: 313px;
+                    opacity: 50%;
+                }
+                .center, .s{
+                    position: absolute;
+                    top: 100px;
+                    left: center;
+                    opacity: 100%;
+                    z-index: 2;
+                    max-width: 280px;
+                }
+            }
+        }
+
+        .marketing-text{
+            margin: auto;
+            max-width: 500px;
+            p{
+                font-size: 15px;
+            }
+        }
+
+        .main-thread-info{
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
 .main-sidebar {
     display: flex;
     flex-direction: column;
@@ -625,6 +682,27 @@ body {
                 @include text($font-2, $color-4, none, normal, 600, 18px, 149.8%);
                 padding: 30px 0;
             }
+        }
+    }
+}
+
+@media screen and(max-width: $lg){
+    .main-sidebar{
+        .main-sidebar__logos{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            max-width: 700px;
+            margin: auto;
+            img{
+                padding-right: 20px;
+            }
+        }
+        .main-sidebar__partners{
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            padding: 30px;
         }
     }
 }
@@ -712,4 +790,29 @@ body {
         @include text($font-1, $color-4, uppercase, normal, normal, 23px, 46px);
     }   
 
+}
+
+@media screen and(max-width: $xl){
+    .footer{
+        .footer__blocks{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .footer__blocks__info{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 80px 0 20px 0;
+                .footer-blocks__1{
+                    padding-bottom: 20px;
+                    a{
+                        padding: 0;
+                    }
+                }
+                .footer-blocks__2{
+
+                }
+            }
+        }
+    }
 }
