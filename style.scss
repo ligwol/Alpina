@@ -435,6 +435,10 @@ body {
                     img {
                         padding-right: 8px;
                     }
+                    p{
+                        margin: 0;
+                        padding: 0;
+                    }
                 }
             }
         }
@@ -644,6 +648,62 @@ body {
     }
 }
 
+@media screen and(max-width: $ssm){
+    .main-block{
+        .main-block_content{
+            .main-form{
+                .mf-email{
+                    padding: 10px 10px 10px 20px;
+                }
+            }
+        }
+
+        .main-block__images{
+            .marketing-photos{
+                margin: auto;
+            }
+        }
+
+        .marketing-text{
+            display: flex;
+            flex-wrap: wrap;
+            p{
+                display: none;
+            }
+            .start-thread-button{
+                margin-top: 10px;
+                padding: 10px 20px;;
+            }
+        }
+
+        .main-thread-info{
+            .thread-feedback{
+                .block1-head{
+                    display: flex;
+                    flex-direction: row;
+                    .block-head3{
+                        display: flex;
+                        padding: 5px;
+                        img{
+                            padding: 0;
+                        }
+                        p{
+                            display: none;
+                        }
+                    }
+                }
+                .block-content{
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+            .thread-instruction{
+                margin: auto;
+            }
+        }
+    }
+}
+
 .main-sidebar {
     display: flex;
     flex-direction: column;
@@ -813,6 +873,26 @@ body {
 
                 }
             }
+        }
+    }
+}
+@media screen and(max-width: $ssm){
+    .footer{
+        .footer__blocks{
+            .footer__blocks__info{
+                margin: auto;
+                .footer-blocks__2{    
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+            .footer__credits{
+                padding: 0;
+            }
+        }
+        .footer__thanks{
+            max-width: 100wh;
+            font-size: 20px;
         }
     }
 }

@@ -435,6 +435,10 @@ body {
 .main-block .main-thread-info .thread-feedback .block1-head .block-head3 img {
   padding-right: 8px;
 }
+.main-block .main-thread-info .thread-feedback .block1-head .block-head3 p {
+  margin: 0;
+  padding: 0;
+}
 .main-block .main-thread-info .block2-head {
   margin: 25px 0;
   display: flex;
@@ -662,6 +666,46 @@ body {
     flex-direction: column;
   }
 }
+@media screen and (max-width: 320px) {
+  .main-block .main-block_content .main-form .mf-email {
+    padding: 10px 10px 10px 20px;
+  }
+  .main-block .main-block__images .marketing-photos {
+    margin: auto;
+  }
+  .main-block .marketing-text {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .main-block .marketing-text p {
+    display: none;
+  }
+  .main-block .marketing-text .start-thread-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+  }
+  .main-block .main-thread-info .thread-feedback .block1-head {
+    display: flex;
+    flex-direction: row;
+  }
+  .main-block .main-thread-info .thread-feedback .block1-head .block-head3 {
+    display: flex;
+    padding: 5px;
+  }
+  .main-block .main-thread-info .thread-feedback .block1-head .block-head3 img {
+    padding: 0;
+  }
+  .main-block .main-thread-info .thread-feedback .block1-head .block-head3 p {
+    display: none;
+  }
+  .main-block .main-thread-info .thread-feedback .block-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-block .main-thread-info .thread-instruction {
+    margin: auto;
+  }
+}
 .main-sidebar {
   display: flex;
   flex-direction: column;
@@ -864,5 +908,21 @@ body {
   }
   .footer .footer__blocks .footer__blocks__info .footer-blocks__1 a {
     padding: 0;
+  }
+}
+@media screen and (max-width: 320px) {
+  .footer .footer__blocks .footer__blocks__info {
+    margin: auto;
+  }
+  .footer .footer__blocks .footer__blocks__info .footer-blocks__2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer .footer__blocks .footer__credits {
+    padding: 0;
+  }
+  .footer .footer__thanks {
+    max-width: 100wh;
+    font-size: 20px;
   }
 }
