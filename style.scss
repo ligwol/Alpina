@@ -192,7 +192,7 @@ body {
     }
 }
 
-@media screen and(max-width: $ssm){
+@media screen and(max-width: $sm){
     .header{
         background-color: $color-4;
         position: sticky;
@@ -648,7 +648,7 @@ body {
     }
 }
 
-@media screen and(max-width: $ssm){
+@media screen and(max-width: $sm){
     .main-block{
         .main-block_content{
             .main-form{
@@ -876,7 +876,7 @@ body {
         }
     }
 }
-@media screen and(max-width: $ssm){
+@media screen and(max-width: $sm){
     .footer{
         .footer__blocks{
             .footer__blocks__info{

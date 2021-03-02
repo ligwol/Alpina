@@ -152,7 +152,7 @@ body {
     border-bottom: none;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 540 px) {
   .header {
     background-color: #2D2828;
     position: sticky;
@@ -666,7 +666,7 @@ body {
     flex-direction: column;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 540 px) {
   .main-block .main-block_content .main-form .mf-email {
     padding: 10px 10px 10px 20px;
   }
@@ -910,7 +910,7 @@ body {
     padding: 0;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 540 px) {
   .footer .footer__blocks .footer__blocks__info {
     margin: auto;
   }
